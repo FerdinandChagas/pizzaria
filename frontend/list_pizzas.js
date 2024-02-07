@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function(event) {
     event.preventDefault();
     // Fazendo uma solicitação GET para a API de categorias
-    fetch('http://localhost:8000/api/books/', {
+    fetch('http://localhost:8000/api/pizzas/', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -19,14 +19,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
         // Verifica se o elemento com ID 'dados' existe
         if (data) {
             // Itera sobre a lista de categorias e insere cada categoria na tabela
-            data.forEach(book => {
-                console.log(book.id)
+            data.forEach(pizza => {
+
                 const newRow = dadosTbody.insertRow();
                 newRow.innerHTML = `<tr>
-                                        <td>${book.id}</td>
-                                        <td>${book.title}</td>
-                                        <td>${book.author}</td>
-                                        <td>${book.genero}</td>
+                                        <td>${pizza.id}</td>
+                                        <td>${pizza.flavor}</td>
+                                        <td>${pizza.price}</td>
                                     </tr>`;
             });
             

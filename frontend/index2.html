@@ -6,26 +6,32 @@
     <title>Document</title>
 </head>
 <body>
-    <form id="book_register">
-        <label>Título</label>
-        <input type="text" id="title"><br>
-        <label>Autor</label>
-        <input type="text" id="author"><br>
-        <label>Gênero</label>
-        <input type="text" id="genero"><br>
+    <form id="pizza_register">
+        <label>Sabor</label>
+        <input type="text" id="flavor"><br>
+        <label>Tamanho</label>
+        <input type="text" id="size"><br>
+        <label>Borda</label>
+        <input type="checkbox" id="border"><br>
+        <label>Sabor da Borda</label>
+        <input type="text" id="border_flavor"><br>
+        <label>Preço</label>
+        <input type="text" id="price"><br>
+        <label>Doce</label>
+        <input type="checkbox" id="sweet"><br>
         <input type="submit" value="Cadastrar">
     </form>
     <hr>
     <table>
         <thead>
             <th>ID</th>
-            <th>Título</th>
-            <th>Autor</th>
-            <th>Gênero</th>
+            <th>Sabor</th>
+            <th>Preço</th>
         </thead>
         <tbody id="dados"></tbody>
     </table>
-    <script src="book_register.js"></script>
-    <script src="list_books.js"></script>
+    <script src="pizza_register.js"></script>
+    <script src="list_pizzas.js"></script>
+    
 </body>
 </html>
