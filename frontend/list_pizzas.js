@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         const dadosTbody = document.getElementById("dados");
         // Verifica se o elemento com ID 'dados' existe
         if (data) {
-            // Itera sobre a lista de categorias e insere cada categoria na tabela
+            // Itera sobre a lista de pizzas e insere cada pizza na tabela
             data.forEach(pizza => {
 
                 const newRow = dadosTbody.insertRow();

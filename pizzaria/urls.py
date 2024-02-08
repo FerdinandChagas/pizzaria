@@ -18,10 +18,11 @@ from django.contrib import admin
 from django.urls import path
 from rest_framework.routers import DefaultRouter
 
-from menu.api.views import PizzaViewSet
+from menu.api.views import PizzaViewSet, KalzoneViewSet
 
 router = DefaultRouter()
 router.register("api/pizzas", PizzaViewSet, basename='pizzas')
+router.register("api/kalzones", KalzoneViewSet, basename="kalzones")
 
 urlpatterns = [
     path('admin/', admin.site.urls),

@@ -1,9 +1,9 @@
 from rest_framework import status
 from rest_framework.decorators import action
-from rest_framework.permissions import AllowAny
+from rest_framework.permissions import AllowAny, IsAdminUser
 from rest_framework.response import Response
 from rest_framework.viewsets import ModelViewSet
-from menu.api.serializers import PizzaSerializer, Pizza
+from menu.api.serializers import PizzaSerializer, Pizza, KalzoneSerializer, Kalzone
 
 # Classes que herdam de ModelViewSet já implementam o CRUD
 class PizzaViewSet(ModelViewSet):
@@ -21,3 +21,7 @@ class PizzaViewSet(ModelViewSet):
         return Response(
             {"info":"Pizzas encontradas", "data":serializer.data}, #Enviando o serializer como resposta
             status=status.HTTP_200_OK) #Definido o código HTTP da resposta.
+
+class KalzoneViewSet(ModelViewSet):
+    serializer_class = KalzoneSerializer
+    queryset = Kalzone.objects.all()
