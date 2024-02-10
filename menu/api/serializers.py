@@ -5,7 +5,13 @@ class PizzaSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Pizza
-        fields = "__all__"
+        fields = "__all__" # ['id', 'flavor','border','border_flavor', 'price', 'sweet']
+
+class PizzaOnlyFlavorAttributeSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Pizza
+        fields = ['flavor']
 
 class KalzoneSerializer(serializers.ModelSerializer):
 
